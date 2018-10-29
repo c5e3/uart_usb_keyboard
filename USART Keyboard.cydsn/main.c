@@ -24,7 +24,7 @@ int main(void){
     UART_1_PutString("USART to USB Keyboard\r\n");
     
     CYGlobalIntEnable;
-	USBFS_1_Start(KEYBOARD_DEVICE, USBFS_1_5V_OPERATION);
+    USBFS_1_Start(KEYBOARD_DEVICE, USBFS_1_5V_OPERATION);
     while(!USBFS_1_bGetConfiguration());
     USBFS_1_LoadInEP(KEYBOARD_ENDPOINT, keyboardData, KEYBOARD_DATA_SIZE);
     
